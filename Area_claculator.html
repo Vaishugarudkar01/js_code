@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000000;
+          background-image: linear-gradient(0deg, #000000 0%, #1acfe6 100%);
+      height: 100vh;
+        }
+        .heading{
+            color: #ffffff;
+            text-align: center;
+
+        }
+        .container{
+            background-color: #ffffff;
+            width: 200px;
+           padding: 10px;
+           display: block;
+           margin: auto;
+           border-radius: 20px;
+           height: 250px;
+           justify-content: space-around;
+        }
+        .field{
+            width: 80%;
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+        .btn{
+            display: block;
+            margin: auto;
+            background-color: #000000;
+          background-image: linear-gradient(0deg, #000000 0%, #1acfe6 100%);
+          border: none;
+          border-radius: 10px;
+          padding: 5px;
+          color: #ffffff;
+          font-size:    10px;
+          margin-top: 30px;
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h2 class="heading">AREA OF TRIANGLE CALCULATOR</h2>
+    <div class="container">
+       Length :<input type="text" id="num1" placeholder="Enter The Length" class="field"/>
+
+       Breadth :<input type="text" id="num2" placeholder="Enter The Breadth " class="field"/>
+
+       Height :<input type="text" id="num3" placeholder="Enter The  Height" class="field"/>
+
+        <p id="ans">   </p>
+
+       <button type="button" class="btn" onclick="calArea()">CALCULATE</button>
+    </div>
+
+    <script>
+       function calArea(){
+        const input1 = document.getElementById("num1");
+
+        const input2 = document.getElementById("num2");
+
+        const input3 = document.getElementById("num3");
+
+        const area = parseInt(input1.value) * parseInt(input2.value) * parseInt(input3.value);
+
+        const ansElement = document.getElementById("ans");
+
+        ansElement.innerText = `Answer: ${area}`;
+       }
+
+
+    </script>
+</body>
+</html>
